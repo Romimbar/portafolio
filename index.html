@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - ROMINA IMBARRATO</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-top: 1px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      width: 300px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #2c3e50;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Romina Imbarrato</h1>
+    <p>Diseñadora | Programadora | Estudiante de Software</p>
+    <img class="profile-img" src="mi-foto.jpeg" alt="mi-foto"/>
+  </header>
+
+  <div class="card-container">
+    <div class="card">
+      <h2>Sobre mí</h2>
+      <p>Soy una persona creativa y apasionada por la tecnología, con experiencia en diseño gráfico, diseño de indumentaria y en proceso de formación en desarrollo de software.</p>
+    </div>
+
+    <div class="card">
+      <h2>Proyectos</h2>
+      <ul>
+        <li><strong>App de turnos médicos</strong> – Android Studio</li>
+        <li><strong>Diseño de identidad visual</strong> – Adobe Illustrator</li>
+        <li><strong>Sistema de gestión</strong> – C# y MySQL</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Contacto</h2>
+      <p>Email: <a href="mailto:rei_dg@hotmail.com">rei_dg@hotmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/tuperfil" target="_blank">Mi perfil</a></p>
+      <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">Mis proyectos</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Romina Imbarrato - Portfolio Personal</p>
+  </footer>
+
+</body>
+</html>
+
