@@ -69,6 +69,50 @@
       color: white;
       margin-top: 2rem;
     }
+
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
   </style>
 </head>
 <body>
@@ -82,22 +126,26 @@
   <div class="card-container">
     <div class="card">
       <h2>Sobre mí</h2>
-      <p>Soy una persona creativa y apasionada por la tecnología, con experiencia en diseño gráfico, diseño de indumentaria y en proceso de formación en desarrollo de software.</p>
+      <p>"Soy diseñadora gráfica y de indumentaria, actualmente enfocada en mi formación como desarrolladora de software. Me motiva aprender constantemente y aplicar mis conocimientos en tecnología para crear soluciones funcionales, combinando diseño, lógica y usabilidad en cada proyecto. Valoro la creatividad tanto como la eficiencia, y disfruto unir ambos mundos en mi trabajo."</p>
     </div>
 
     <div class="card">
       <h2>Proyectos</h2>
       <ul>
-        <li><strong>App de turnos médicos</strong> – Android Studio</li>
-        <li><strong>Diseño de identidad visual</strong> – Adobe Illustrator</li>
-        <li><strong>Sistema de gestión</strong> – C# y MySQL</li>
+        <li><strong>Desarrollo de aplicaciones</strong> – Club Deportivo</li>
+        <li><strong>Sistema de gestión</strong> – Clinica Medica</li>
+        <li><strong>Diseñadora grafica</strong></li>
+        <li><strong>Freelance </strong><a href="#" onclick="openGallery()">Ilustraciones</a></li>
+        <li><strong>Diseñadora de Indumentaria </strong></li>
+       
+        
       </ul>
     </div>
 
     <div class="card">
       <h2>Contacto</h2>
       <p>Email: <a href="mailto:rei_dg@hotmail.com">rei_dg@hotmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/tuperfil" target="_blank">Mi perfil</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/romina-imbarrato-" target="_blank">Mi perfil</a></p>
       <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">Mis proyectos</a></p>
     </div>
   </div>
@@ -105,6 +153,45 @@
   <footer>
     <p>&copy; 2025 Romina Imbarrato - Portfolio Personal</p>
   </footer>
+  <div id="galleryModal" class="modal">
+    <span class="close" onclick="closeGallery()">&times;</span>
+    <img class="modal-content" id="galleryImage">
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  </div>
+
+  <script>
+    const images = [
+      "ilustr1.jpg",
+      "ilustr2.jpg",
+      "ilustr3.jpg",
+      "ilustr4.jpg",
+      "ilustr5.jpg"
+    ];
+  
+    let currentIndex = 0;
+  
+    function openGallery() {
+      document.getElementById("galleryModal").style.display = "block";
+      showImage(currentIndex);
+    }
+  
+    function closeGallery() {
+      document.getElementById("galleryModal").style.display = "none";
+    }
+  
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      showImage(currentIndex);
+    }
+  
+    function showImage(index) {
+      const img = document.getElementById("galleryImage");
+      img.src = images[index];
+    }
+  </script>
 
 </body>
 </html>
