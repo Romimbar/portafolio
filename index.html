@@ -119,7 +119,7 @@
 
   <header>
     <h1>Romina Imbarrato</h1>
-    <p>Diseñadora | Programadora | Estudiante de Software</p>
+    <p>Diseñadora Grafica | Diseñadora de Indumentaria | Estudiante de Software</p>
     <img class="profile-img" src="mi-foto.jpeg" alt="mi-foto"/>
   </header>
 
@@ -132,11 +132,10 @@
     <div class="card">
       <h2>Proyectos</h2>
       <ul>
-        <li><strong>Desarrollo de aplicaciones</strong> – Club Deportivo</li>
-        <li><strong>Sistema de gestión</strong> – Clinica Medica</li>
-        <li><strong>Diseñadora grafica</strong></li>
-        <li><strong>Freelance </strong><a href="#" onclick="openGallery()">Ilustraciones</a></li>
-        <li><strong>Diseñadora de Indumentaria </strong></li>
+        <li><strong>Desarrollo de aplicaciones UX/UI</strong><a href=" https://www.figma.com/proto/q4z6jM2XpXFSbF0VZd081y/CLUB-DEPORTIVO-DAM?node-id=0-1&t=WWige3BmRn8AYnV3-1"> Club Deportivo</a></li>
+        <li><strong>Desarrollo de aplicaciones Android</strong><a href="https://github.com/Ailinci/TPmobile.git"> Club Deportivo </a></li>
+        <li><strong>Diseñadora Grafica | Freelance </strong><a href="#" onclick="openGallery()">Ilustraciones</a></li>
+        <li><strong>Diseñadora de Indumentaria </strong><a href="#" onclick="openGalleryIndu()">Trabajos</a></li>
        
         
       </ul>
@@ -146,7 +145,23 @@
       <h2>Contacto</h2>
       <p>Email: <a href="mailto:rei_dg@hotmail.com">rei_dg@hotmail.com</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/romina-imbarrato-" target="_blank">Mi perfil</a></p>
-      <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">Mis proyectos</a></p>
+      <p>GitHub: <a href="https://github.com/Romimbar" target="_blank">Mis proyectos</a></p>
+    </div>
+  
+
+    <div class="card">
+      <h2>Sumate a mi red</h2>
+      <p>¿Tenés ganas de colaborar en proyectos creativos y/o tecnológicos? ¡Estoy armando una red de trabajo con personas con ideas y ganas de crecer!</p>
+    
+      <form action="https://formsubmit.co/rei_dg@hotmail.com" method="POST">
+        
+        <input type="text" name="nombre" placeholder="Tu nombre" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem;" />
+        <input type="email" name="email" placeholder="Tu correo" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem;" />
+        <input type="text" name="rol" placeholder="¿A qué te dedicas?" style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem;" />
+        <textarea name="mensaje" placeholder="Como te gustaría colaborar" required style="width: 100%; padding: 0.5rem; height: 100px; margin-bottom: 0.5rem;"></textarea>
+    
+        <button type="submit" style="background-color: #2c3e50; color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 8px; cursor: pointer;">Enviar</button>
+      </form>
     </div>
   </div>
 
@@ -169,9 +184,26 @@
       "ilustr5.jpg"
     ];
   
+    const imagesIndu = [
+      "indu1.jpg",
+      "indu2.jpg",
+      "indu3.jpg",
+      "indu4.jpg"
+    ];
+  
+    let currentGallery = 'ilustraciones';
     let currentIndex = 0;
   
     function openGallery() {
+      currentGallery = 'ilustraciones';
+      currentIndex = 0;
+      document.getElementById("galleryModal").style.display = "block";
+      showImage(currentIndex);
+    }
+  
+    function openGalleryIndu() {
+      currentGallery = 'indumentaria';
+      currentIndex = 0;
       document.getElementById("galleryModal").style.display = "block";
       showImage(currentIndex);
     }
@@ -181,17 +213,20 @@
     }
   
     function changeSlide(direction) {
+      const gallery = currentGallery === 'ilustraciones' ? images : imagesIndu;
       currentIndex += direction;
-      if (currentIndex < 0) currentIndex = images.length - 1;
-      if (currentIndex >= images.length) currentIndex = 0;
+      if (currentIndex < 0) currentIndex = gallery.length - 1;
+      if (currentIndex >= gallery.length) currentIndex = 0;
       showImage(currentIndex);
     }
   
     function showImage(index) {
       const img = document.getElementById("galleryImage");
-      img.src = images[index];
+      const gallery = currentGallery === 'ilustraciones' ? images : imagesIndu;
+      img.src = gallery[index];
     }
   </script>
+  <input type="hidden" name="_next" value="gracias.html">
 
 </body>
 </html>
