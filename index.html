@@ -3,215 +3,224 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio profesional de Romina Imbarrato - Diseñadora y Desarrolladora">
   <title>Portfolio - ROMINA IMBARRATO</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f2f5;
-    }
-
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #fff;
-      margin-top: 1px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 2rem;
-    }
-
-    .card {
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      width: 300px;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    h2 {
-      color: #2c3e50;
-    }
-
-    a {
-      color: #3498db;
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #2c3e50;
-      color: white;
-      margin-top: 2rem;
-    }
-
-    .modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  padding-top: 60px;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 80%;
-  max-height: 80%;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 40px;
-  user-select: none;
-  transition: 0.3s;
-}
-
-.prev { left: 0; }
-.next { right: 0; }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
 
-  <header>
-    <h1>Romina Imbarrato</h1>
-    <p>Diseñadora Grafica | Diseñadora de Indumentaria | Estudiante de Software</p>
-    <img class="profile-img" src="mi-foto.jpeg" alt="mi-foto"/>
+<body>
+  <header class="main-header">
+    <div class="header-content">
+      <img class="profile-img" src="mi-foto.jpeg" alt="Foto de Romina Imbarrato"/>
+      <div class="header-text">
+        <h1>Romina Imbarrato</h1>
+        <p class="subtitle">Diseñadora Gráfica | Diseñadora de Indumentaria | Estudiante de Software</p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/romina-imbarrato-" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Romimbar" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:rei_dg@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <div class="card-container">
-    <div class="card">
-      <h2>Sobre mí</h2>
-      <p>"Soy diseñadora gráfica y de indumentaria, actualmente enfocada en mi formación como desarrolladora de software. Me motiva aprender constantemente y aplicar mis conocimientos en tecnología para crear soluciones funcionales, combinando diseño, lógica y usabilidad en cada proyecto. Valoro la creatividad tanto como la eficiencia, y disfruto unir ambos mundos en mi trabajo."</p>
+  <div class="main-content-container">
+    <div class="cards-column">
+      <main class="card-container">
+        <section class="about-section">
+          <article class="card">
+            <h2><i class="fas fa-user"></i> Sobre mí</h2>
+            <p>"Soy diseñadora gráfica y de indumentaria, actualmente enfocada en mi formación como desarrolladora de software. Me motiva aprender constantemente y aplicar mis conocimientos en tecnología para crear soluciones funcionales, combinando diseño, lógica y usabilidad en cada proyecto."</p>
+          </article>
+        </section>
+
+        <section class="projects-section">
+          <article class="card">
+            <h2><i class="fas fa-project-diagram"></i> Proyectos</h2>
+            <ul class="projects-list">
+              <li>
+                <strong>Desarrollo de aplicaciones UX/UI:</strong> 
+                <a href="https://www.figma.com/proto/q4z6jM2XpXFSbF0VZd081y/CLUB-DEPORTIVO-DAM?node-id=0-1&t=WWige3BmRn8AYnV3-1" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Club Deportivo
+                </a>
+              </li>
+              <li>
+                <strong>Desarrollo de aplicaciones Android:</strong> 
+                <a href="https://github.com/Ailinci/TPmobile.git" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Club Deportivo
+                </a>
+              </li>
+              <li>
+                <strong>Diseñadora Gráfica Freelance:</strong> 
+                <a href="#" onclick="openGallery()" class="project-link">
+                  <i class="fas fa-images"></i> Ilustraciones
+                </a>
+              </li>
+              <li>
+                <strong>Diseñadora de Indumentaria:</strong> 
+                <a href="#" onclick="openGalleryIndu()" class="project-link">
+                  <i class="fas fa-tshirt"></i> Trabajos
+                </a>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="skills-section">
+          <article class="card">
+            <h2><i class="fas fa-laptop-code"></i> Mis conocimientos y hobbies</h2>
+            <div class="table-responsive">
+              <table class="skills-table">
+                <thead>
+                  <tr>
+                    <th><i class="fas fa-check-circle"></i> Tecnologías</th>
+                    <th><i class="fas fa-book"></i> Quiero aprender</th>
+                    <th><i class="fas fa-heart"></i> Hobbies</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>HTML, CSS, JavaScript</td>
+                    <td> React</td>
+                    <td>Diseño Web</td>
+                  </tr>
+                  <tr>
+                    <td>Adobe Creative Suite </td>
+                    <td>Audaces</td>
+                    <td>Diseño de moda</td>
+                  </tr>
+                  <tr>
+                    <td>figma</td>
+                    <td>Kotlin</td>
+                    <td>UI/UX Avanzado</td>
+                  </tr>
+                  <tr>
+                    <td>Photoshop, Illustrator, Corel draw </td>
+                    <td>Adobe Premier</td>
+                    <td>Fotografia</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <section class="contact-section">
+          <article class="card">
+            <h2><i class="fas fa-envelope"></i> Contacto</h2>
+            <div class="contact-info">
+              <p><i class="fas fa-envelope"></i> Email: <a href="mailto:rei_dg@hotmail.com">rei_dg@hotmail.com</a></p>
+              <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/romina-imbarrato-" target="_blank">Mi perfil</a></p>
+              <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Romimbar" target="_blank">Mis proyectos</a></p>
+            </div>
+          </article>
+        </section>
+
+         <!-- Botón de acceso al formulario -->
+         <div class="form-access">
+          <a href="#contact-form" class="btn-form-access">
+            <i class="fas fa-paper-plane"></i> Sumate a mi red
+          </a>
+        </div>
+     
+
+        <!-- Espacio para trabajos futuros -->
+        <section class="future-works-section">
+          <article class="card">
+            <h2><i class="fas fa-paint-brush"></i> Galeria</h2>
+            <div class= "works-section">
+              
+              <div class="work-placeholder">
+                <i class="fas fa-plus-circle"></i>
+                <p>Próximamente agregaré mas trabajos aquí</p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
     </div>
 
-    <div class="card">
-      <h2>Proyectos</h2>
-      <ul>
-        <li><strong>Desarrollo de aplicaciones UX/UI</strong><a href=" https://www.figma.com/proto/q4z6jM2XpXFSbF0VZd081y/CLUB-DEPORTIVO-DAM?node-id=0-1&t=WWige3BmRn8AYnV3-1"> Club Deportivo</a></li>
-        <li><strong>Desarrollo de aplicaciones Android</strong><a href="https://github.com/Ailinci/TPmobile.git"> Club Deportivo </a></li>
-        <li><strong>Diseñadora Grafica | Freelance </strong><a href="#" onclick="openGallery()">Ilustraciones</a></li>
-        <li><strong>Diseñadora de Indumentaria </strong><a href="#" onclick="openGalleryIndu()">Trabajos</a></li>
-       
-        
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>Contacto</h2>
-      <p>Email: <a href="mailto:rei_dg@hotmail.com">rei_dg@hotmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/romina-imbarrato-" target="_blank">Mi perfil</a></p>
-      <p>GitHub: <a href="https://github.com/Romimbar" target="_blank">Mis proyectos</a></p>
-    </div>
-  
-
-    <div class="card">
-      <h2>Sumate a mi red</h2>
-      <p>¿Tenés ganas de colaborar en proyectos creativos y/o tecnológicos? ¡Estoy armando una red de trabajo con personas con ideas y ganas de crecer!</p>
-    
-      <form action="https://formsubmit.co/rei_dg@hotmail.com" method="POST">
-        
-        <input type="text" name="nombre" placeholder="Tu nombre" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem;" />
-        <input type="email" name="email" placeholder="Tu correo" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem;" />
-        <input type="text" name="rol" placeholder="¿A qué te dedicas?" style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem;" />
-        <textarea name="mensaje" placeholder="Como te gustaría colaborar" required style="width: 100%; padding: 0.5rem; height: 100px; margin-bottom: 0.5rem;"></textarea>
-    
-        <button type="submit" style="background-color: #2c3e50; color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 8px; cursor: pointer;">Enviar</button>
-      </form>
+   
+   
     </div>
   </div>
 
-  <footer>
+  <!-- Formulario de contacto  -->
+  <section class="contact-form-section" id="contact-form">
+    <div class="form-container">
+      <h2><i class="fas fa-envelope-open-text"></i> Sumate a nuevos proyectos</h2>
+      <form class="contact-form" action="https://formsubmit.co/rei_dg@hotmail.com" method="POST">
+        <div class="form-group">
+          <label for="name">Nombre completo</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Asunto</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn-enviar">Enviar <i class="fas fa-paper-plane"></i></button>
+        <input type="hidden" name="_next" value="gracias.html">
+      </form>
+    </div>
+  </section>
+
+  <footer class="main-footer">
     <p>&copy; 2025 Romina Imbarrato - Portfolio Personal</p>
+    <div class="footer-links">
+      <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i> Volver arriba</a>
+    </div>
   </footer>
+
+  <!-- Galería modal -->
   <div id="galleryModal" class="modal">
     <span class="close" onclick="closeGallery()">&times;</span>
-    <img class="modal-content" id="galleryImage">
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    <div class="modal-content-container">
+      <img class="modal-content" id="galleryImage" alt="Galería de imágenes">
+    </div>
+    <div class="modal-controls">
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <div class="image-counter" id="imageCounter"></div>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
   </div>
 
   <script>
-    const images = [
-      "ilustr1.jpg",
-      "ilustr2.jpg",
-      "ilustr3.jpg",
-      "ilustr4.jpg",
-      "ilustr5.jpg"
-    ];
-  
-    const imagesIndu = [
-      "indu1.jpg",
-      "indu2.jpg",
-      "indu3.jpg",
-      "indu4.jpg"
-    ];
-  
+    const images = ["ilustr1.jpg", "ilustr2.jpg", "ilustr3.jpg", "ilustr4.jpg", "ilustr5.jpg"];
+    const imagesIndu = ["indu1.jpg", "indu2.jpg", "indu3.jpg", "indu4.jpg"];
     let currentGallery = 'ilustraciones';
     let currentIndex = 0;
-  
+
     function openGallery() {
       currentGallery = 'ilustraciones';
       currentIndex = 0;
       document.getElementById("galleryModal").style.display = "block";
       showImage(currentIndex);
+      document.body.style.overflow = 'hidden';
     }
-  
+
     function openGalleryIndu() {
       currentGallery = 'indumentaria';
       currentIndex = 0;
       document.getElementById("galleryModal").style.display = "block";
       showImage(currentIndex);
+      document.body.style.overflow = 'hidden';
     }
-  
+
     function closeGallery() {
       document.getElementById("galleryModal").style.display = "none";
+      document.body.style.overflow = 'auto';
     }
-  
+
     function changeSlide(direction) {
       const gallery = currentGallery === 'ilustraciones' ? images : imagesIndu;
       currentIndex += direction;
@@ -219,15 +228,25 @@
       if (currentIndex >= gallery.length) currentIndex = 0;
       showImage(currentIndex);
     }
-  
+
     function showImage(index) {
       const img = document.getElementById("galleryImage");
+      const counter = document.getElementById("imageCounter");
       const gallery = currentGallery === 'ilustraciones' ? images : imagesIndu;
       img.src = gallery[index];
+      img.alt = `${currentGallery === 'ilustraciones' ? 'Ilustración' : 'Diseño de indumentaria'} ${index + 1}`;
+      counter.textContent = `${index + 1} / ${gallery.length}`;
     }
-  </script>
-  <input type="hidden" name="_next" value="gracias.html">
 
+    
+
+        // Smooth scroll para el botón del formulario
+    document.querySelector('.btn-form-access').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>
-
