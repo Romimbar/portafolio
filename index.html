@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
   <meta name="description" content="Portfolio profesional de Romina Imbarrato - Diseñadora y Desarrolladora">
   <title>Portfolio - ROMINA IMBARRATO</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -13,7 +14,7 @@
 <body>
   <header class="main-header">
     <div class="header-content">
-      <img class="profile-img" src="mi-foto.jpeg" alt="Foto de Romina Imbarrato"/>
+      <img class="profile-img" src="images/mi-foto.jpeg" alt="Foto de Romina Imbarrato"/>
       <div class="header-text">
         <h1>Romina Imbarrato</h1>
         <p class="subtitle">Diseñadora Gráfica | Diseñadora de Indumentaria | Estudiante de Software</p>
@@ -194,59 +195,29 @@
     </div>
   </div>
 
-  <script>
-    const images = ["ilustr1.jpg", "ilustr2.jpg", "ilustr3.jpg", "ilustr4.jpg", "ilustr5.jpg"];
-    const imagesIndu = ["indu1.jpg", "indu2.jpg", "indu3.jpg", "indu4.jpg", "indu5.jpg"];
-    let currentGallery = 'ilustraciones';
-    let currentIndex = 0;
 
-    function openGallery() {
-      currentGallery = 'ilustraciones';
-      currentIndex = 0;
-      document.getElementById("galleryModal").style.display = "block";
-      showImage(currentIndex);
-      document.body.style.overflow = 'hidden';
-    }
+  <script src="script/gallery.js"></script>
 
-    function openGalleryIndu() {
-      currentGallery = 'indumentaria';
-      currentIndex = 0;
-      document.getElementById("galleryModal").style.display = "block";
-      showImage(currentIndex);
-      document.body.style.overflow = 'hidden';
-    }
+  
+  <!-- MODAL DE GALERÍA -->
+<div id="galleryModal">
+  <!-- Botón Cerrar -->
+  <span id="closeModal" onclick="closeGallery()">&times;</span>
 
-    function closeGallery() {
-      document.getElementById("galleryModal").style.display = "none";
-      document.body.style.overflow = 'auto';
-    }
+  <!-- Botón Anterior -->
+  <button class="gallery-nav-button gallery-prev" onclick="changeSlide(-1)">&#10094;</button>
 
-    function changeSlide(direction) {
-      const gallery = currentGallery === 'ilustraciones' ? images : imagesIndu;
-      currentIndex += direction;
-      if (currentIndex < 0) currentIndex = gallery.length - 1;
-      if (currentIndex >= gallery.length) currentIndex = 0;
-      showImage(currentIndex);
-    }
+  <!-- Imagen principal -->
+  <img id="galleryImage" src="" alt="Imagen galería">
 
-    function showImage(index) {
-      const img = document.getElementById("galleryImage");
-      const counter = document.getElementById("imageCounter");
-      const gallery = currentGallery === 'ilustraciones' ? images : imagesIndu;
-      img.src = gallery[index];
-      img.alt = `${currentGallery === 'ilustraciones' ? 'Ilustración' : 'Diseño de indumentaria'} ${index + 1}`;
-      counter.textContent = `${index + 1} / ${gallery.length}`;
-    }
+  <!-- Contador de imágenes -->
+  <span id="imageCounter">1 / 5</span>
 
-    
+  <!-- Botón Siguiente -->
+  <button class="gallery-nav-button gallery-next" onclick="changeSlide(1)">&#10095;</button>
+</div>
 
-        // Smooth scroll para el botón del formulario
-    document.querySelector('.btn-form-access').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  </script>
+
+  
 </body>
 </html>
