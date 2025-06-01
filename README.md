@@ -1,56 +1,65 @@
-Portfolio de Romina Imbarrato
-¡Hola! Este es mi portfolio personal donde muestro mi trabajo como diseñadora gráfica, diseñadora de indumentaria y también como estudiante de desarrollo de software. La web está pensada para ser clara, visual y accesible desde distintos dispositivos.
+# Portafolio - Romina Imbarrato
 
-Estructura general del sitio
-El sitio tiene varias secciones, que permiten conocer mi perfil y explorar mis trabajos:
+Este repositorio contiene mi portafolio personal, donde combino mis conocimientos de Diseño Gráfico, Diseño de Indumentaria y Desarrollo Web.
 
-Inicio: una presentación general con mi nombre, título y una imagen de fondo.
+---
 
-Sobre mí: descripción breve de mi formación y experiencia.
+## 📋 Descripción
 
-Portfolio:
+Me gustaba dibujar y lo artístico, así que estudié **Diseño Gráfico**. Más tarde me volqué laboralmente a la **Indumentaria**, creando colecciones y aprendiendo a contar historias con telas. Actualmente estoy transitando el **desarrollo web** y aprendiendo a programar para llevar mis ideas al mundo digital. Hoy fusiono diseño, moda y código para crear proyectos atractivos y funcionales.
 
-Ilustraciones: galería interactiva de trabajos gráficos.
+---
 
-Indumentaria: galería de diseños textiles.
+## 🚀 Tecnologías utilizadas
 
-Skills: tecnologías y herramientas que manejo.
+- **HTML5**  
+- **CSS3** (con variables, flexbox, grid y media queries para responsividad)  
+- **JavaScript** (modal de galería, scroll suave, etc.)  
+- **Font Awesome** (para íconos)  
+- **Google Fonts** (`Montserrat`)  
 
-Formulario de contacto: permite enviar consultas directamente.
 
-Pie de página (footer): con datos de contacto y redes.
+## 📂 Estructura del proyecto
+portafolio/
+├── index.html
+├── gracias.html
+├── styles/
+│ └── styles.css
+├── script.js
+├── images/
+│ ├── mi-foto.jpeg
+│ ├── galeria/
+│ │ ├── img1.jpg
+│ │ └── ...
+│ └── galeria-indu/
+│ ├── indu1.jpg
+│ └── ...
+├── README.md
+└── .gitignore
 
-Tecnologías utilizadas
-Tecnología	Descripción
-HTML5	Estructura del contenido. Uso semántico de etiquetas.
-CSS3	Estilos visuales, maquetado responsive, tipografías, botones, etc.
-JavaScript	Comportamiento dinámico como la galería de imágenes con modal, y el scroll suave hacia el formulario.
-Responsive Design	El diseño se adapta a dispositivos móviles, tabletas y pantallas grandes. Se usaron media queries.
 
-Galería interactiva
-La galería se abre en un modal (ventana superpuesta) y permite ver las ilustraciones o diseños de indumentaria en formato ampliado. Tiene:
+- `index.html`: Página principal de mi portafolio.
+- `gracias.html`: Página de agradecimiento después de enviar el formulario.
+- `styles/styles.css`: Estilos personalizados (variables, diseño responsive, componentes).
+- `script.js`: JavaScript para el modal de galería de imágenes y scroll.
+- `images/`: Carpeta con imágenes del sitio (foto de perfil, galerías, etc.).
+- `README.md`: Este archivo de documentación.
 
-Flechas de navegación para ir a la siguiente o anterior imagen.
 
-Contador de imágenes actual.
+---
 
-Botón para cerrar la vista modal.
+## 🔧 Instalación y uso local
 
-📱 Diseño adaptable
-El sitio se adapta automáticamente a distintos tamaños de pantalla usando @media queries en CSS, tamaños flexibles y estructura en columnas. Probado en:
+1. **Clona el repositorio** a tu máquina local:
+   ```bash
+   git clone https://github.com/Romimbar/portafolio.git
 
-Celulares
-Tablets
-Laptops
 
-Estructura de archivos (simplificada)
-bash
-Copiar
-Editar
-/index.html
-/css/styles.css
-/js/script.js
-/images/...
-/fonts/...
-Contacto
-Si querés contactarme, podés usar el formulario al final del sitio. El envío se puede conectar a un backend o servicio de terceros en futuras versiones.
+   📢 Contacto
+Email: rei_dg@hotmail.com
+
+LinkedIn: romina-imbarrato
+
+GitHub: Romimbar
+
+¡Gracias por visitar mi portafolio!

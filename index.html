@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
+
 <body>
-  <header class="main-header">
+  <header class="main-header seccion-con-fondo">
     <div class="header-content">
       <img class="profile-img" src="images/mi-foto.jpeg" alt="Foto de Romina Imbarrato"/>
       <div class="header-text">
@@ -26,6 +27,7 @@
       </div>
     </div>
   </header>
+  
 
   <div class="main-content-container">
     <div class="cards-column">
@@ -36,6 +38,16 @@
             <p>"Soy diseñadora gráfica y de indumentaria, actualmente enfocada en mi formación como desarrolladora de software. Me motiva aprender constantemente y aplicar mis conocimientos en tecnología para crear soluciones funcionales, combinando diseño, lógica y usabilidad en cada proyecto."</p>
           </article>
         </section>
+
+        <section class="about-section">
+          <article class="card">
+            <h2><i class="fas fa-user"></i> Mi historia</h2>
+            <p>"Me gustaba dibujar y lo artístico, así que estudié Diseño Gráfico. Más tarde me volqué laboralmente a la Indumentaria, creando colecciones y aprendiendo a contar historias con telas. Actualmente estoy transitando el desarrollo web y aprendiendo a programar para llevar mis ideas al mundo digital. Hoy fusiono diseño, moda y código para crear proyectos atractivos y funcionales.”</p>
+          </article>
+        </section>
+       
+
+       
 
         <section class="projects-section">
           <article class="card">
@@ -54,20 +66,32 @@
                 </a>
               </li>
               <li>
-                <strong>Diseñadora Gráfica Freelance:</strong> 
-                <a href="#" onclick="openGallery()" class="project-link">
-                  <i class="fas fa-images"></i> Ilustraciones
+                <strong>Desarrollo Front End:</strong> 
+                <a href="https://github.com/FabioNatanaelMora/Tienda-de-Te.git" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Tienda de Te
                 </a>
-              </li>
-              <li>
-                <strong>Diseñadora de Indumentaria:</strong> 
-                <a href="#" onclick="openGalleryIndu()" class="project-link">
-                  <i class="fas fa-tshirt"></i> Trabajos
-                </a>
-              </li>
+              </li>  
+              <ul>
+                <li>
+                  <strong>Diseñadora Gráfica Freelance:</strong>
+                  <a href="#gallery" class="project-link">
+                    <i class="fas fa-images"></i> Ilustraciones
+                  </a>
+                </li>
+                <li>
+                  <strong>Diseñadora de Indumentaria:</strong>
+                  <a href="#gallery" class="project-link">
+                    <i class="fas fa-images"></i> Trabajos
+                  </a>
+               </li>                             
+                         
             </ul>
           </article>
         </section>
+
+    
+
+ 
 
         <section class="skills-section">
           <article class="card">
@@ -108,16 +132,36 @@
           </article>
         </section>
 
-        <section class="contact-section">
-          <article class="card">
-            <h2><i class="fas fa-envelope"></i> Contacto</h2>
-            <div class="contact-info">
-              <p><i class="fas fa-envelope"></i> Email: <a href="mailto:rei_dg@hotmail.com">rei_dg@hotmail.com</a></p>
-              <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/romina-imbarrato-" target="_blank">Mi perfil</a></p>
-              <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Romimbar" target="_blank">Mis proyectos</a></p>
-            </div>
-          </article>
-        </section>
+  <section class="contact-section">
+  <article class="card">
+    <h2><i class="fas fa-envelope"></i> Contacto</h2>
+    <div class="contact-cards">
+      <!-- Card LinkedIn -->
+      <div class="contact-card">
+        <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+        <h3 class="contact-title">LinkedIn</h3>
+        <p>Conectemos profesionalmente</p>
+        <a href="https://linkedin.com/in/romina-imbarrato-" target="_blank" class="contact-link">Visitar perfil</a>
+      </div>
+      
+      <!-- Card Email -->
+      <div class="contact-card">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <h3 class="contact-title">Email</h3>
+        <p>Contáctame directamente</p>
+        <a href="mailto:rei_dg@hotmail.com" class="contact-link">Enviar mensaje</a>
+      </div>
+      
+      <!-- Card GitHub -->
+      <div class="contact-card">
+        <div class="contact-icon"><i class="fab fa-github"></i></div>
+        <h3 class="contact-title">GitHub</h3>
+        <p>Mira mis proyectos</p>
+        <a href="https://github.com/Romimbar" target="_blank" class="contact-link">Ver repositorios</a>
+      </div>
+    </div>
+  </article>
+</section>
 
          <!-- Botón de acceso al formulario -->
          <div class="form-access">
@@ -125,34 +169,79 @@
             <i class="fas fa-paper-plane"></i> Sumate a mi red
           </a>
         </div>
-     
 
-        <!-- Espacio para trabajos futuros -->
-        <section class="future-works-section">
-          <article class="card">
-            <h2><i class="fas fa-paint-brush"></i> Galeria</h2>
-            <div class= "works-section">
-              
-              <div class="work-placeholder">
-                <i class="fas fa-plus-circle"></i>
-                <p>Próximamente agregaré mas trabajos aquí</p>
-              </div>
-            </div>
-          </article>
-        </section>
-      </main>
-    </div>
 
-   
+           <!-- Galería -->
+  <section class="works-section" id="gallery">
+    <article class="card">
+      <h2><i class="fas fa-paint-brush"></i> Galería</h2>
+      <div class="works-section works-grid">
+        <img
+          src="/images/galeria/img1.jpg"
+          alt="Ilustracion para tapa de disco para banda de rock"
+          class="work-thumb"
+        />
+        <img
+          src="/images/galeria/img2.jpg"
+          alt="Cuadro tematica  "
+          class="work-thumb"
+        />
+        <img
+          src="/images/galeria/img3.jpg"
+          alt="Estampa mosaicos arte abstracto"
+           class="work-thumb"
+        />
+        <img
+          src="/images/galeria/img4.jpg"
+          alt="Cuadro tematica japonesa"
+          class="work-thumb"
+        />
+        <img
+           src="/images/galeria/img5.jpg"
+           alt="Estampa para marca de ropa "
+           class="work-thumb"
+         />
+        <img
+          src="/images/galeria-indu/indu1.jpg"
+          alt="Diseño de estampa, Proceso y producto final para marca de indumentaria"
+          class="work-thumb"
+        />
+        <img
+          src="/images/galeria-indu/indu2.jpg"
+          alt="Diseño de estampa, Proceso y producto final para marca de indumentaria"
+          class="work-thumb"
+        />
+        <img
+           src="/images/galeria-indu/indu3.jpg"
+           alt="Diseño de estampa, Proceso y producto final para marca de indumentaria"
+           class="work-thumb"
+        />
+        <img
+          src="/images/galeria-indu/indu4.jpg"
+          alt="Estampas varias para marca de indumentaria"
+          class="work-thumb"
+        />
+        <img
+           src="/images/galeria-indu/indu5.jpg"
+           alt="Diseño de producto y packaging para marca de indumentaria"
+           class="work-thumb"
+         />        
+      </div>
+    </article>
+  </section>
+  
+        
+    </main>      
    
     </div>
   </div>
 
   <!-- Formulario de contacto  -->
   <section class="contact-form-section" id="contact-form">
+   
     <div class="form-container">
       <h2><i class="fas fa-envelope-open-text"></i> Sumate a nuevos proyectos</h2>
-      <form class="contact-form" action="https://formsubmit.co/rei_dg@hotmail.com" method="POST">
+      <form class="contact-form" action="https://formspree.io/f/mdkznjvg" method="POST">
         <div class="form-group">
           <label for="name">Nombre completo</label>
           <input type="text" id="name" name="name" required>
@@ -171,53 +260,57 @@
         </div>
         <button type="submit" class="btn-enviar">Enviar <i class="fas fa-paper-plane"></i></button>
         <input type="hidden" name="_next" value="gracias.html">
+        <input type="hidden" name="_captcha" value="false">
       </form>
     </div>
   </section>
 
-  <footer class="main-footer">
-    <p>&copy; 2025 Romina Imbarrato - Portfolio Personal</p>
-    <div class="footer-links">
-      <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i> Volver arriba</a>
-    </div>
-  </footer>
-
-  <!-- Galería modal -->
-  <div id="galleryModal" class="modal">
-    <span class="close" onclick="closeGallery()">&times;</span>
-    <div class="modal-content-container">
-      <img class="modal-content" id="galleryImage" alt="Galería de imágenes">
-    </div>
-    <div class="modal-controls">
-      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-      <div class="image-counter" id="imageCounter"></div>
-      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  <div id="galleryModal" style="display:none;">
+    <span id="closeBtn" style="position:absolute; top:20px; right:30px; font-size:2.5rem; color:white; cursor:pointer;">&times;</span>
+    <img id="galleryImage" src="" alt="Imagen galería" style="max-width:90vw; max-height:80vh; border-radius:8px; box-shadow: 0 0 15px #000;" />
+    <div class="caption" style="color:white; margin-top:10px; display:flex; gap:1em; align-items:center; justify-content:center;">
+      <button class="nav-btn" id="prevBtn" style="font-size:1.8rem; background:none; border:none; color:white; cursor:pointer;">&#10094; Anterior</button>
+      <span id="imageCounter"></span>
+      <button class="nav-btn" id="nextBtn" style="font-size:1.8rem; background:none; border:none; color:white; cursor:pointer;">Siguiente &#10095;</button>
     </div>
   </div>
-
+  
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img id="modal-img" class="modal-content">
+    <div id="caption"></div>
+  </div>
 
   <script src="script/gallery.js"></script>
+  </body>
 
-  
-  <!-- MODAL DE GALERÍA -->
-<div id="galleryModal">
-  <!-- Botón Cerrar -->
-  <span id="closeModal" onclick="closeGallery()">&times;</span>
-
-  <!-- Botón Anterior -->
-  <button class="gallery-nav-button gallery-prev" onclick="changeSlide(-1)">&#10094;</button>
-
-  <!-- Imagen principal -->
-  <img id="galleryImage" src="" alt="Imagen galería">
-
-  <!-- Contador de imágenes -->
-  <span id="imageCounter">1 / 5</span>
-
-  <!-- Botón Siguiente -->
-  <button class="gallery-nav-button gallery-next" onclick="changeSlide(1)">&#10095;</button>
-</div>
-
-
-  
-</body>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>Romina Imbarrato</h3>
+      <p>Diseñadora Gráfica | Diseñadora de Indumentaria</p>
+    </div>
+    
+    <div class="footer-center">
+      <a href="#" class="footer-logo">Portfolio</a>
+      <div class="footer-social">
+        <a href="https://linkedin.com/in/romina-imbarrato-" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Romimbar" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:rei_dg@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    
+    <div class="footer-right">
+      <p>Contacto:</p>
+      <p><a href="mailto:rei_dg@hotmail.com">rei_dg@hotmail.com</a></p>
+    </div>
+    
+    <div class="footer-copyright">
+      <p>&copy; 2025 Romina Imbarrato. Todos los derechos reservados.</p>
+      <div class="footer-nav">
+        <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i> Volver arriba</a>
+      </div>
+    </div>
+  </div>
+</footer>
 </html>
